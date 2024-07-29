@@ -1,0 +1,56 @@
+1. 셀레니움을 사용한다.
+2. 크롬 창이 열린 후 Ctrl을 누른 채로 마우스 휠을 아래 방향으로 10회 내린다. 이후 동적 웹페이지이므로 웹사이트의 스크롤을 끝까지 내린다.
+3. 수집할 것은 제목, 시간, 링크이다.
+4. 요소의 예는 다음과 같다. 
+
+<li class="bx" id="sp_nws8"> <div class="news_wrap api_ani_send"> <div class="news_area"> <div class="news_info"> <div class="api_save_group _keep_wrap"> <a href="#" role="button" class="btn_save _keep_trigger" data-url="http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202407100716&amp;t=NN" onclick="tCR('a=nws*e.kep&amp;r=8&amp;i=88000149_000000000000000001170231&amp;u=javascript'); return false;" aria-pressed="false"><i class="spnew ico_save">문서 저장하기</i></a> <div class="api_ly_save _keep_save_layer"> <a href="#" role="button" class="spnew_af item item_save _keep_save" data-cr-on="a=nws*e.kepon&amp;r=8&amp;i=88000149_000000000000000001170231&amp;u=javascript" data-cr-off="a=nws*e.kepoff&amp;r=8&amp;i=88000149_000000000000000001170231&amp;u=javascript">Keep에 저장</a> <a href="https://keep.naver.com/" class="spnew_af item item_quick" target="_blank" onclick="return goOtherCR(this,'a=nws*e.kephome&amp;r=8&amp;i=88000149_000000000000000001170231&amp;u='+urlencode(this.href));">Keep 바로가기</a> </div></div><div class="info_group"> <a href="http://www.wowtv.co.kr/" class="info press" target="_blank" onclick="return goOtherCR(this, 'a=nws*e.prof&amp;r=8&amp;i=88000149_000000000000000001170231&amp;g=215.0001170231&amp;u='+urlencode(this.href));"><span class="thumb_box"><img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fmimgnews.pstatic.net%2Fimage%2Fupload%2Foffice_logo%2F215%2F2018%2F09%2F18%2Flogo_215_18_20180918133718.png&amp;type=f54_54&amp;expire=24&amp;refresh=true" alt="" width="24" height="24" class="thumb" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.className='thumb bg_default_press'"></span>한국경제TV</a><span class="info">27분 전</span><a href="https://n.news.naver.com/mnews/article/215/0001170231?sid=004" class="info" target="_blank" onclick="return goOtherCR(this, 'a=nws*e.nav&amp;r=8&amp;i=88000149_000000000000000001170231&amp;u='+urlencode(this.href));">네이버뉴스</a> </div></div><div class="news_contents"> <a href="http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202407100716&amp;t=NN" class="dsc_thumb " target="_blank" onclick="return goOtherCR(this, 'a=nws*e.img&amp;r=8&amp;i=88000149_000000000000000001170231&amp;g=215.0001170231&amp;u='+urlencode(this.href));"><img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fimgnews.pstatic.net%2Fimage%2Forigin%2F215%2F2024%2F07%2F10%2F1170231.jpg&amp;type=ofullfill208_208_empty&amp;expire=2&amp;refresh=true" width="104" height="104" alt="몸값 오른 가상화폐, " class="thumb" onerror="this.parentNode.style.display='none';"></a> <a href="http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202407100716&amp;t=NN" class="news_tit" target="_blank" onclick="return goOtherCR(this, 'a=nws*e.tit&amp;r=8&amp;i=88000149_000000000000000001170231&amp;g=215.0001170231&amp;u='+urlencode(this.href));" title="몸값 오른 가상화폐, 해킹 절도도 급증">몸값 오른 가상화폐, 해킹 절도도 급증 </a> <div class="news_dsc"> <div class="dsc_wrap"> <a href="http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202407100716&amp;t=NN" class="api_txt_lines dsc_txt_wrap" target="_blank" onclick="return goOtherCR(this, 'a=nws*e.body&amp;r=8&amp;i=88000149_000000000000000001170231&amp;g=215.0001170231&amp;u='+urlencode(this.href));">올해 상반기 <mark>비트코인</mark> 등 가상화폐 가격이 급등하자 해커들로 인한 도난 피해액도 급증했다는 조사 결과가 나왔다. 블록체인 리서치업체인 TRM랩스는 최근 보고서를 통해 올해 들어 지난달 24일까지 해킹에 따른 가상화폐 절도 규모가 13억8천만원(약 1조9천억원)으로 추산됐다고 밝혔다고 9일(현지시간)... </a> </div> </div></div></div></div></li>
+
+
+<li class="bx" id="sp_nws8"> 중 숫자는 바뀔 수 있다. 
+웹 페이지 내의 모든 li.bx를 대상으로 한다.
+
+5.  뉴스의 링크는 a href= 중에서 https://n.news.naver.com/가 있는 것만을 수집한다.
+6.  뉴스의 시간은 <span class="info">의 모든 내용을 그대로 수집한다.
+7. 뉴스의 제목은 title=의 값을 모두 수집한다.
+8. 이후 수집한 것을 csv로 저장한다.
+9. 저장한 파일명은 저장 시간으로 한다.
+
+	
+
+
+
+
+
+------------
+1. 셀레니움을 사용한다.
+2. 수집할 내용은 기사제목, 기사 입력 시간, 댓글 수, 댓글 내용, 댓글의 공감 수, 댓글의 비공감 수이다. 
+3. 예시의 요소로 수집할 내용의 위치를 설명.
+기사 제목은 요소 <h2 id="title_area" class="media_end_head_headline"><span>비트코인 5억 간다더니…'부자아빠' 저자 돌연 ‘폭락' 경고</span></h2> 내의
+"비트코인 5억 간다더니…'부자아빠' 저자 돌연 ‘폭락' 경고"
+4. 입력 시간은 요소 <span class="media_end_head_info_datestamp_time _ARTICLE_DATE_TIME" data-date-time="2024-07-10 07:38:15" data-date-time-age-in-minutes="722">2024.07.10. 오전 7:38</span>
+안의 "2024-07-10 07:38:15"
+5. 댓글 수는 요소 <a href="/mnews/article/comment/014/0005211151?sid=104" class="media_end_head_cmtcount_button _COMMENT_COUNT_VIEW" id="comment_count" data-clk="rplt" data-zero-allow="false" data-max-limit="true">17</a>
+안의 "17"을 의미하고, 댓글 수가 0이라면 media_end_head_cmtcount_button _COMMENT_COUNT_VIEW is_zero으로 나타나게 된다.
+6. 댓글 수가 0이라면 댓글 내용, 댓글의 공감 수, 댓글의 비공감 수는 수집하지 않고 공란으로 둔다.
+7. 만약 댓글 수가 1이상이라면 a href="/mnews/article/comment/014/0005211151?sid=104"중 /mnews/article/comment/014/0005211151?sid=104 링크 앞에 https://n.news.naver.com/를 추가하여 댓글 페이지로 이동한다. 
+8. 댓글 페이지로 이동 후 화면 비율을 최소화하고, 페이지의 끝까지 스크롤을 내린다.
+9. 댓글 페이지로 이동 후 <span class="u_cbox_contents" style="" data-lang="ko">사*기*꾼</span> 중 "사*기*꾼"과 같은 댓글 내용을 수집한다.
+10. 댓글의 공감수는 <em class="u_cbox_cnt_recomm">6</em> 중에서 6을 의미한다.
+11. 댓글의 비공감수는  <em class="u_cbox_cnt_unrecomm">2</em>중 2를 의미한다.
+12. 수집한 정보를 utf-8-sig로 인코딩하여, csv 파일로 저장한다. 
+
+
+
+ # 페이지 스크롤 끝까지 내리기
+        last_height = driver.execute_script("return document.body.scrollHeight")
+        while True:
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            time.sleep(2)
+            new_height = driver.execute_script("return document.body.scrollHeight")
+            if new_height == last_height:
+                break
+            last_height = new_height     
+를 실행하고 난 후 끝까지 내려갔을 때 
+만약 댓글 페이지에 <span class="u_cbox_page_more">더보기</span>가 있다면   
+더보기가 있는 부분을 클릭하고 스크롤을 끝까지 내려줘.
+더보기가 나타나지 않을 때까지
